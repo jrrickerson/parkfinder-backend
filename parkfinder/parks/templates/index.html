@@ -1,0 +1,35 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Park Pride Parkfinder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+    {% block container %}
+        <div class="content">
+            <h4>Park Pride Parkfinder</h4>
+            <ul>
+                <li><a href="https://parkpride.org">Park Pride Website</a></li>
+                <li><a href="{% url 'admin:index' %}">Admin Log in</a></li>
+            </ul>
+        </div>
+    {% endblock %}
+    </div> <!-- /container -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
