@@ -20,4 +20,7 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('', include('parkfinder.parks.urls')),
+    path('api/', include('parkfinder.api.urls')),
+    path('api-auth/', include('rest_framework.urls',
+         namespace='rest_framework'))
 ]

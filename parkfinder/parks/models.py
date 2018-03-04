@@ -40,7 +40,8 @@ class Park(models.Model):
 
 
 class ParkAmenity(models.Model):
-    park = models.ForeignKey(Park, on_delete=models.CASCADE)
+    park = models.ForeignKey(
+        Park, on_delete=models.CASCADE, related_name='park_amenities')
     amenity_type = models.ForeignKey(AmenityType, on_delete=models.CASCADE)
 
     count = models.IntegerField()
