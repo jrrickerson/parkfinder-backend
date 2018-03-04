@@ -14,9 +14,9 @@ class Park(models.Model):
     address = models.CharField(max_length=250)
     zipcode = models.CharField(max_length=50)
     county = models.CharField(max_length=250)
-    district = models.IntegerField()
-    latitude = models.FloatField()
-    longitude = models.FloatField()
+    district = models.IntegerField(null=True)
+    latitude = models.FloatField(null=True)
+    longitude = models.FloatField(null=True)
     notes = models.TextField(blank=True)
 
     former_name = models.CharField(max_length=250, blank=True)
@@ -26,8 +26,8 @@ class Park(models.Model):
     global_id = models.UUIDField()
     park_id = models.CharField(max_length=50)
     parcel_id = models.CharField(max_length=250)
-    shape_length = models.FloatField()
-    shape_area = models.FloatField()
+    shape_length = models.FloatField(null=True)
+    shape_area = models.FloatField(null=True)
     park_class = models.CharField(
         max_length=50, blank=True, verbose_name='class')
     npu1 = models.CharField(max_length=250, blank=True)
